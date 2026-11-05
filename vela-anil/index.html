@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vela Anil — roupas leves do Ceará</title>
+<meta name="description" content="Vela Anil: roupas de linho e algodão feitas em Fortaleza para o calor de verdade. Camisas, vestidos, bermudas e acessórios com frete grátis acima de R$ 299.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Vela Anil",
+  "description": "Roupas de linho e algodão feitas em Fortaleza para o calor.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Fortaleza", "addressRegion": "CE", "addressCountry": "BR"},
+  "priceRange": "R$ 69 – R$ 389",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Pix, cartão de crédito"
+}
+</script>
+<style>
+:root{
+  --anil:#2433A0;      /* índigo do tingimento */
+  --anil-escuro:#161F66;
+  --sol:#F4C430;       /* sol de meio-dia */
+  --mar:#9FD8CF;       /* água rasa */
+  --branco:#FFFFFF;
+  --tinta:#1A1D2E;
+  --nevoa:#EEF1F8;
+  --erro:#B3261E;
+  --r-pequeno:6px;
+  --r-grande:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--tinta);background:var(--branco);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+button,input,select{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sol);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+
+/* ---------- Barra superior ---------- */
+.aviso{background:var(--anil-escuro);color:var(--branco);text-align:center;font-size:14px;padding:8px 16px}
+.topo{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--nevoa)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:22px;font-stretch:80%;letter-spacing:-.02em}
+.marca svg{width:30px;height:30px}
+.nav{display:flex;gap:28px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500}
+.nav a:hover{color:var(--anil)}
+.btn-sacola{display:flex;align-items:center;gap:10px;background:var(--tinta);color:var(--branco);border:0;border-radius:999px;padding:10px 18px;cursor:pointer;font-weight:600;font-size:15px}
+.btn-sacola .qtd{background:var(--sol);color:var(--tinta);min-width:24px;height:24px;border-radius:999px;display:grid;place-items:center;font-size:13px;font-weight:700}
+.btn-sacola.pulou{animation:pulo .45s ease}
+@keyframes pulo{40%{transform:scale(1.08)}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:56px 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:end;min-height:min(78vh,720px)}
+.hero h1{font-size:clamp(52px,8.6vw,132px);line-height:.88;font-weight:800;font-stretch:75%;letter-spacing:-.035em;padding-bottom:28px}
+.hero h1 span{display:block}
+.hero p{max-width:40ch;font-size:19px;color:#3b3f55;margin-bottom:28px}
+.acoes{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:64px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 26px;font-weight:600;text-decoration:none;cursor:pointer;border:2px solid var(--tinta);background:transparent;font-size:16px;transition:background .2s,color .2s}
+.btn-cheio{background:var(--anil);border-color:var(--anil);color:var(--branco)}
+.btn-cheio:hover{background:var(--anil-escuro);border-color:var(--anil-escuro)}
+.btn:not(.btn-cheio):hover{background:var(--tinta);color:var(--branco)}
+.cena{position:relative;align-self:stretch;min-height:440px}
+.cena svg{position:absolute;inset:auto 0 0 0;width:100%;height:100%}
+.selo{position:absolute;right:6%;top:8%;width:118px;height:118px;border-radius:50%;background:var(--branco);display:grid;place-items:center;text-align:center;font-size:13px;font-weight:600;line-height:1.2;box-shadow:0 10px 30px rgba(22,31,102,.18);padding:12px}
+.selo b{display:block;font-size:26px;font-stretch:75%;color:var(--anil)}
+
+/* ---------- Faixa de valores ---------- */
+.valores{background:var(--anil);color:var(--branco)}
+.valores .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:28px 0}
+.valores div{display:flex;gap:14px;align-items:flex-start;font-size:15px}
+.valores strong{display:block;font-size:17px}
+.valores svg{flex:none;width:28px;height:28px}
+
+/* ---------- Loja ---------- */
+.secao{padding:88px 0}
+.cab-secao{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+h2{font-size:clamp(34px,4.6vw,56px);line-height:1;font-weight:800;font-stretch:80%;letter-spacing:-.025em}
+.cab-secao p{color:#4b4f66;max-width:46ch;margin-top:10px}
+.filtros{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid #cfd4e6;background:var(--branco);border-radius:999px;padding:8px 16px;cursor:pointer;font-size:15px;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--branco)}
+.ordem{display:flex;align-items:center;gap:8px;font-size:15px}
+.ordem select{border:1.5px solid #cfd4e6;border-radius:var(--r-pequeno);padding:8px 10px;background:var(--branco)}
+.barra-loja{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:36px 24px}
+.produto{display:flex;flex-direction:column}
+.foto{position:relative;aspect-ratio:4/5;border-radius:var(--r-grande);overflow:hidden;display:grid;place-items:center;cursor:pointer;border:0;width:100%;padding:0}
+.foto svg{width:68%;height:auto;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.foto:hover svg{transform:rotate(-3deg) scale(1.04)}
+.etiqueta{position:absolute;left:14px;top:14px;background:var(--branco);border-radius:999px;font-size:13px;font-weight:600;padding:5px 11px}
+.etiqueta.promo{background:var(--sol)}
+.info{padding:14px 4px 0;display:flex;justify-content:space-between;gap:12px}
+.info h3{font-size:18px;font-weight:600;line-height:1.25}
+.info .tecido{font-size:14px;color:#5c607a}
+.preco{text-align:right;font-weight:700;white-space:nowrap}
+.preco s{display:block;font-weight:400;font-size:14px;color:#7a7e96}
+.cores{display:flex;gap:6px;padding:10px 4px 0}
+.cores span{width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.vazio{grid-column:1/-1;text-align:center;padding:60px 0;color:#4b4f66}
+
+/* ---------- Coleção feita em casa ---------- */
+.origem{background:var(--nevoa)}
+.origem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.origem p{font-size:19px;color:#3b3f55;max-width:52ch;margin-top:20px}
+.passos{list-style:none;display:grid;gap:4px;margin-top:32px}
+.passos li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:18px 0;border-top:1px solid #d5dbec}
+.passos li b{font-size:28px;font-stretch:75%;color:var(--anil);line-height:1}
+.passos li strong{display:block}
+.passos li span{color:#4b4f66;font-size:16px}
+.renda{aspect-ratio:1;border-radius:50%;background:var(--anil);display:grid;place-items:center;max-width:480px;width:100%;justify-self:center}
+
+/* ---------- Depoimentos e newsletter ---------- */
+.news{background:var(--sol)}
+.news .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:72px 0}
+.news p{margin-top:12px;font-size:18px;max-width:44ch}
+.form-news{display:flex;gap:10px;flex-wrap:wrap}
+.form-news input{flex:1 1 240px;border:2px solid var(--tinta);border-radius:999px;padding:14px 20px;background:var(--branco)}
+.form-news .btn{background:var(--tinta);color:var(--branco)}
+.msg-news{flex-basis:100%;font-weight:600;min-height:1.5em}
+
+/* ---------- Rodapé ---------- */
+footer{background:var(--anil-escuro);color:#cfd4f2;padding:56px 0 32px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h4{color:var(--branco);font-size:16px;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--branco)}
+.base{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;margin-top:20px;font-size:14px}
+
+/* ---------- Painéis (sacola e produto) ---------- */
+.fundo{position:fixed;inset:0;background:rgba(26,29,46,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+.fundo.aberto{opacity:1;pointer-events:auto}
+.gaveta{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--branco);z-index:50;transform:translateX(100%);transition:transform .38s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.gaveta.aberto{transform:none}
+.gaveta header{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--nevoa)}
+.gaveta h2{font-size:30px}
+.fechar{border:0;background:var(--nevoa);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:22px;line-height:1}
+.frete{padding:16px 24px;font-size:15px;border-bottom:1px solid var(--nevoa)}
+.trilho{height:8px;border-radius:99px;background:var(--nevoa);margin-top:8px;overflow:hidden}
+.trilho i{display:block;height:100%;background:var(--anil);width:0;transition:width .4s}
+.itens{flex:1;overflow:auto;padding:8px 24px}
+.item{display:grid;grid-template-columns:76px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--nevoa);align-items:center}
+.item .mini{width:76px;height:92px;border-radius:12px;display:grid;place-items:center}
+.item .mini svg{width:70%}
+.item h3{font-size:16px;font-weight:600}
+.item small{color:#5c607a;font-size:14px}
+.qtd-ctrl{display:inline-flex;align-items:center;border:1.5px solid #cfd4e6;border-radius:999px;margin-top:8px}
+.qtd-ctrl button{border:0;background:none;width:32px;height:30px;cursor:pointer;font-size:18px}
+.qtd-ctrl span{min-width:22px;text-align:center;font-size:15px}
+.remover{border:0;background:none;color:#5c607a;font-size:14px;text-decoration:underline;cursor:pointer;margin-left:10px}
+.sacola-vazia{text-align:center;padding:60px 10px;color:#4b4f66}
+.sacola-vazia .btn{margin-top:18px}
+.rodape-sacola{padding:20px 24px;border-top:1px solid var(--nevoa);display:grid;gap:12px}
+.linha{display:flex;justify-content:space-between}
+.linha.total{font-size:20px;font-weight:700}
+
+.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:20px;pointer-events:none;opacity:0;transition:opacity .25s}
+.modal.aberto{opacity:1;pointer-events:auto}
+.caixa{background:var(--branco);border-radius:var(--r-grande);width:min(920px,100%);max-height:calc(100vh - 40px);overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;transform:translateY(16px);transition:transform .3s}
+.modal.aberto .caixa{transform:none}
+.caixa .foto{border-radius:0;aspect-ratio:auto;min-height:420px;cursor:default}
+.caixa .detalhe{padding:36px 32px;display:flex;flex-direction:column;gap:16px}
+.caixa .fechar{position:absolute;right:16px;top:16px;z-index:2;background:var(--branco)}
+.detalhe h2{font-size:38px}
+.detalhe .preco{text-align:left;font-size:24px}
+.detalhe p{color:#3b3f55}
+fieldset{border:0}
+legend{font-weight:600;margin-bottom:8px;font-size:15px}
+.opcoes{display:flex;gap:8px;flex-wrap:wrap}
+.opcoes input{position:absolute;opacity:0}
+.opcoes label{border:1.5px solid #cfd4e6;border-radius:var(--r-pequeno);min-width:48px;padding:9px 12px;text-align:center;cursor:pointer;font-size:15px}
+.opcoes input:checked+label{background:var(--tinta);color:var(--branco);border-color:var(--tinta)}
+.opcoes input:focus-visible+label{outline:3px solid var(--sol);outline-offset:2px}
+.opcoes .cor-op{width:34px;height:34px;min-width:0;padding:0;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.opcoes input:checked+.cor-op{box-shadow:0 0 0 2px var(--branco),0 0 0 4px var(--tinta)}
+.erro{color:var(--erro);font-size:14px;font-weight:600;min-height:1.2em}
+
+/* checkout */
+.form-check{display:grid;gap:14px}
+.form-check label{display:grid;gap:6px;font-size:15px;font-weight:500}
+.form-check input{border:1.5px solid #cfd4e6;border-radius:var(--r-pequeno);padding:12px 14px}
+.dupla{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pix{display:flex;gap:16px;align-items:center;background:var(--nevoa);border-radius:16px;padding:16px}
+.pix svg{width:110px;height:110px;flex:none;background:var(--branco);border-radius:8px;padding:6px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--tinta);color:var(--branco);padding:14px 22px;border-radius:999px;z-index:70;transition:transform .35s cubic-bezier(.2,.8,.2,1);font-size:15px;font-weight:500}
+.toast.vis{transform:translate(-50%,0)}
+
+@media (max-width:900px){
+  .nav{display:none}
+  .hero .wrap,.origem .wrap,.news .wrap{grid-template-columns:1fr}
+  .cena{min-height:340px}
+  .acoes{padding-bottom:16px}
+  .valores .wrap{grid-template-columns:1fr;gap:16px}
+  .caixa{grid-template-columns:1fr}
+  .caixa .foto{min-height:300px}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="aviso">Frete grátis para todo o Brasil em compras acima de R$ 299 · Troca fácil em 30 dias</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a href="#" class="marca" aria-label="Vela Anil, início">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M15 3 L15 25 L4 25 Z" fill="#2433A0"/><path d="M17 7 Q27 15 23 25 L17 25 Z" fill="#F4C430"/><path d="M3 27 H29 L26 30 H6 Z" fill="#1A1D2E"/></svg>
+      Vela Anil
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#loja">Loja</a>
+      <a href="#origem">Como fazemos</a>
+      <a href="#novidades">Novidades</a>
+    </nav>
+    <button class="btn-sacola" id="abrirSacola" aria-label="Abrir sacola">
+      Sacola <span class="qtd" id="qtdSacola">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span class="h-l">Roupa leve</span><span class="h-l">pra quem</span><span class="h-l">vive no sol.</span></h1>
+      <p class="h-t">Linho e algodão cortados e costurados em Fortaleza. Peças que respiram em 34 °C e continuam bonitas depois da lavagem.</p>
+      <div class="acoes h-t">
+        <a href="#loja" class="btn btn-cheio">Ver a coleção</a>
+        <a href="#origem" class="btn">Como fazemos</a>
+      </div>
+    </div>
+    <div class="cena" aria-hidden="true">
+      <svg viewBox="0 0 560 520" preserveAspectRatio="xMidYMax meet">
+        <circle id="sol" cx="400" cy="150" r="96" fill="#F4C430"/>
+        <path id="mar" d="M0 430 Q70 410 140 430 T280 430 T420 430 T560 430 V520 H0 Z" fill="#9FD8CF"/>
+        <g id="jangada">
+          <path id="velaG" d="M270 60 L270 392 L70 392 Z" fill="#2433A0"/>
+          <path id="velaP" d="M286 120 Q420 250 370 392 L286 392 Z" fill="#161F66"/>
+          <rect x="266" y="50" width="6" height="355" fill="#1A1D2E"/>
+          <path d="M40 400 H420 L392 438 H70 Z" fill="#1A1D2E"/>
+        </g>
+        <path d="M0 470 Q70 450 140 470 T280 470 T420 470 T560 470 V520 H0 Z" fill="#2433A0" opacity=".25"/>
+      </svg>
+      <div class="selo h-t"><div><b>100%</b>fibra natural</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="valores" aria-label="Por que comprar aqui">
+  <div class="wrap">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg><p><strong>Frete grátis acima de R$ 299</strong>Entrega em 1 a 2 dias em Fortaleza.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg><p><strong>Troca em 30 dias</strong>A primeira troca é por nossa conta.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v7h-6"/></svg><p><strong>5% de desconto no Pix</strong>Aplicado automaticamente na sacola.</p></div>
+  </div>
+</section>
+
+<section class="secao" id="loja">
+  <div class="wrap">
+    <div class="cab-secao">
+      <div>
+        <h2>A coleção</h2>
+        <p>Toque numa peça para escolher tamanho e cor. Tudo com medidas reais na etiqueta.</p>
+      </div>
+    </div>
+    <div class="barra-loja">
+      <div class="filtros" role="group" aria-label="Filtrar por categoria" id="filtros"></div>
+      <label class="ordem">Ordenar
+        <select id="ordem">
+          <option value="destaque">Destaques</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+        </select>
+      </label>
+    </div>
+    <div class="grade" id="grade" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="secao origem" id="origem">
+  <div class="wrap">
+    <div>
+      <h2>Do tear à sua porta, sem atravessar o país</h2>
+      <p>Compramos linho certificado, tingimos com anil em pequenos lotes e costuramos com uma oficina de 14 costureiras no bairro de Messejana. Cada peça sai com o nome de quem costurou na etiqueta.</p>
+      <ol class="passos">
+        <li><b>1</b><div><strong>Tingimento</strong><span>Lotes de 40 metros, para a cor não variar entre peças.</span></div></li>
+        <li><b>2</b><div><strong>Corte e costura</strong><span>Moldes testados em corpos reais, do PP ao GG.</span></div></li>
+        <li><b>3</b><div><strong>Lavagem e envio</strong><span>Pré-lavadas: a peça não encolhe na sua máquina.</span></div></li>
+      </ol>
+    </div>
+    <div class="renda" aria-hidden="true">
+      <svg viewBox="0 0 200 200" width="78%">
+        <g fill="none" stroke="#FFFFFF" stroke-width="1.4" id="padraoRenda"></g>
+        <circle cx="100" cy="100" r="16" fill="#F4C430"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="novidades">
+  <div class="wrap">
+    <div>
+      <h2>Ganhe 10% na primeira compra</h2>
+      <p>Uma mensagem por mês com os lançamentos e as sobras de tecido que viram edição limitada.</p>
+    </div>
+    <form class="form-news" id="formNews" novalidate>
+      <label class="sr" for="emailNews">Seu e-mail</label>
+      <input id="emailNews" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+      <button class="btn" type="submit">Quero o cupom</button>
+      <p class="msg-news" id="msgNews" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#" class="marca" style="color:#fff">Vela Anil</a>
+      <p style="margin-top:12px;max-width:34ch">Roupas leves feitas em Fortaleza, Ceará. Atendimento de segunda a sábado, das 9h às 18h.</p>
+    </div>
+    <div><h4>Loja</h4><ul><li><a href="#loja">Camisas</a></li><li><a href="#loja">Vestidos</a></li><li><a href="#loja">Bermudas e calças</a></li><li><a href="#loja">Acessórios</a></li></ul></div>
+    <div><h4>Ajuda</h4><ul><li><a href="#loja">Guia de medidas</a></li><li><a href="#loja">Trocas e devoluções</a></li><li><a href="#loja">Prazos de entrega</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li>oi@velaanil.com.br</li><li>(85) 4000-0000</li><li>Rua das Jangadas, 120 — Meireles</li></ul></div>
+    <p class="base">© 2026 Vela Anil. Loja de demonstração: nenhum pedido é cobrado ou enviado.</p>
+  </div>
+</footer>
+
+<!-- Sacola -->
+<div class="fundo" id="fundo"></div>
+<aside class="gaveta" id="sacola" aria-labelledby="tSacola" aria-hidden="true">
+  <header><h2 id="tSacola">Sua sacola</h2><button class="fechar" data-fechar aria-label="Fechar sacola">×</button></header>
+  <div class="frete" id="frete"></div>
+  <div class="itens" id="itens"></div>
+  <div class="rodape-sacola" id="rodapeSacola"></div>
+</aside>
+
+<!-- Modal produto / checkout -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="caixa" id="caixa"></div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+/* ---------------- Dados ---------------- */
+const SILHUETAS = {
+  camisa:'<path d="M70 30 L100 44 L130 30 L172 56 L156 90 L140 82 L140 198 L60 198 L60 82 L44 90 L28 56 Z"/><path d="M100 44 V198" class="det"/><path d="M70 30 L100 60 L130 30" class="det"/>',
+  vestido:'<path d="M78 22 L86 22 L92 48 L108 48 L114 22 L122 22 L126 64 L166 200 L34 200 L74 64 Z"/><path d="M76 72 H124" class="det"/>',
+  bermuda:'<path d="M52 40 H148 L158 156 L108 156 L100 90 L92 156 L42 156 Z"/><path d="M52 54 H148" class="det"/>',
+  calca:'<path d="M58 22 H142 L152 204 L110 204 L100 82 L90 204 L48 204 Z"/><path d="M58 36 H142" class="det"/>',
+  regata:'<path d="M74 26 L88 26 Q100 58 112 26 L126 26 L134 78 L136 196 L64 196 L66 78 Z"/>',
+  saia:'<path d="M66 44 H134 L168 192 L32 192 Z"/><path d="M66 58 H134" class="det"/><path d="M100 58 L92 192 M100 58 L110 192" class="det"/>',
+  bolsa:'<path d="M72 74 Q72 30 100 30 Q128 30 128 74" fill="none" stroke-width="7" class="alca"/><path d="M42 74 H158 L148 196 H52 Z"/>',
+  chapeu:'<ellipse cx="100" cy="148" rx="88" ry="26"/><path d="M58 146 Q60 74 100 74 Q140 74 142 146 Z"/><path d="M60 128 H140" class="det" stroke-width="8"/>'
+};
+const CORES = {anil:'#2433A0', areia:'#E8DCC4', branco:'#F7F7F2', oliva:'#7D8A55', sol:'#F4C430', coral:'#E8806A', mar:'#9FD8CF', preto:'#2A2C38', caju:'#C4552B'};
+const NOMES_COR = {anil:'Anil', areia:'Areia', branco:'Branco', oliva:'Oliva', sol:'Sol', coral:'Coral', mar:'Mar', preto:'Grafite', caju:'Caju'};
+const FUNDOS = ['#EEF1F8','#E3F3F0','#FDF3D3','#F3ECE6'];
+
+const PRODUTOS = [
+  {id:1, nome:'Camisa Praia de Iracema', cat:'Camisas', forma:'camisa', tecido:'Linho puro', preco:259, de:null, cores:['anil','branco','areia'], tam:['P','M','G','GG'], tag:'Mais vendida', desc:'Corte reto, manga longa que dobra fácil e botões de coco. Fica boa fechada no trabalho e aberta na praia.'},
+  {id:2, nome:'Vestido Mucuripe', cat:'Vestidos', forma:'vestido', tecido:'Algodão orgânico', preco:289, de:349, cores:['coral','anil','oliva'], tam:['PP','P','M','G'], tag:'Promoção', desc:'Midi evasê com alças reguláveis e bolsos laterais. Forro leve só na parte de cima.'},
+  {id:3, nome:'Bermuda Cumbuco', cat:'Bermudas e calças', forma:'bermuda', tecido:'Linho com elastano', preco:179, de:null, cores:['areia','oliva','preto'], tam:['38','40','42','44','46'], tag:null, desc:'Cós com elástico atrás e cordão, comprimento acima do joelho. Seca rápido.'},
+  {id:4, nome:'Calça Pantalona Aldeota', cat:'Bermudas e calças', forma:'calca', tecido:'Linho puro', preco:319, de:null, cores:['branco','areia','anil'], tam:['P','M','G','GG'], tag:'Novo', desc:'Cintura alta, pernas amplas e caimento que não marca. Barra pronta para quem tem até 1,70 m.'},
+  {id:5, nome:'Regata Jeri', cat:'Camisas', forma:'regata', tecido:'Malha de algodão', preco:89, de:null, cores:['branco','sol','mar','preto'], tam:['P','M','G','GG'], tag:null, desc:'Malha fria de 160 g, cava nadador. A peça que mais usamos no verão inteiro.'},
+  {id:6, nome:'Saia Canoa Quebrada', cat:'Vestidos', forma:'saia', tecido:'Viscose de bambu', preco:199, de:239, cores:['caju','anil','oliva'], tam:['PP','P','M','G'], tag:'Promoção', desc:'Saia longa com fenda lateral e cós de elástico embutido. Movimenta com o vento sem colar.'},
+  {id:7, nome:'Bolsa Feira de Artesanato', cat:'Acessórios', forma:'bolsa', tecido:'Palha de carnaúba', preco:149, de:null, cores:['areia','caju'], tam:['Único'], tag:'Feito à mão', desc:'Trançada por artesãs de Itaiçaba, cabe um notebook de 13". Forro de algodão com bolso interno.'},
+  {id:8, nome:'Chapéu Dunas', cat:'Acessórios', forma:'chapeu', tecido:'Palha natural', preco:119, de:null, cores:['areia','branco'], tam:['56','58','60'], tag:null, desc:'Aba de 8 cm e fita de algodão tingida com anil. Dobra na mala sem perder a forma.'},
+  {id:9, nome:'Camisa Beira-Mar Curta', cat:'Camisas', forma:'camisa', tecido:'Linho e algodão', preco:219, de:null, cores:['mar','areia','coral'], tam:['P','M','G','GG'], tag:'Novo', desc:'Manga curta, gola cubana e bolso no peito. Bonita para jantar na Beira-Mar.'},
+  {id:10, nome:'Vestido Curto Porto das Dunas', cat:'Vestidos', forma:'vestido', tecido:'Algodão orgânico', preco:229, de:null, cores:['sol','branco','mar'], tam:['PP','P','M','G'], tag:null, desc:'Curto, com alcinhas e amarração nas costas. Funciona como saída de praia também.'},
+  {id:11, nome:'Bermuda Linho Iguape', cat:'Bermudas e calças', forma:'bermuda', tecido:'Linho puro', preco:199, de:229, cores:['anil','branco'], tam:['38','40','42','44'], tag:'Promoção', desc:'Alfaiataria leve com pregas na frente e passantes para cinto.'},
+  {id:12, nome:'Regata Ribeirinha', cat:'Camisas', forma:'regata', tecido:'Linho puro', preco:139, de:null, cores:['oliva','areia','caju'], tam:['P','M','G'], tag:null, desc:'Regata solta de linho com barra arredondada. Combina com a Pantalona Aldeota.'}
+];
+const CATS = ['Tudo', ...new Set(PRODUTOS.map(p=>p.cat))];
+const FRETE_GRATIS = 299, FRETE = 24.9;
+
+/* ---------------- Utilidades ---------------- */
+const $ = s => document.querySelector(s);
+const brl = v => v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function peca(forma, cor, extra=''){
+  const c = CORES[cor];
+  const escuro = ['anil','preto','oliva','caju'].includes(cor);
+  const det = escuro ? 'rgba(255,255,255,.35)' : 'rgba(26,29,46,.25)';
+  return `<svg viewBox="0 0 200 220" aria-hidden="true" ${extra}><style>.det{fill:none;stroke:${det};stroke-width:2.5}.alca{stroke:${c}}</style><g fill="${c}" stroke="rgba(26,29,46,.18)" stroke-width="1.5" stroke-linejoin="round">${SILHUETAS[forma]}</g></svg>`;
+}
+const fundo = id => FUNDOS[id % FUNDOS.length];
+let toastT;
+function aviso(txt){const t=$('#toast');t.textContent=txt;t.classList.add('vis');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('vis'),2600);}
+
+/* ---------------- Estado ---------------- */
+let filtro='Tudo', ordem='destaque';
+let sacola = [];
+try{ sacola = JSON.parse(localStorage.getItem('velaanil-sacola')||'[]'); }catch(e){ sacola=[]; }
+function salvar(){ try{ localStorage.setItem('velaanil-sacola', JSON.stringify(sacola)); }catch(e){} }
+
+/* ---------------- Vitrine ---------------- */
+function renderFiltros(){
+  $('#filtros').innerHTML = CATS.map(c=>`<button class="chip" aria-pressed="${c===filtro}" data-cat="${c}">${c}</button>`).join('');
+}
+function renderGrade(){
+  let lista = PRODUTOS.filter(p=>filtro==='Tudo'||p.cat===filtro);
+  if(ordem==='menor') lista=[...lista].sort((a,b)=>a.preco-b.preco);
+  if(ordem==='maior') lista=[...lista].sort((a,b)=>b.preco-a.preco);
+  $('#grade').innerHTML = lista.length ? lista.map(p=>`
+    <article class="produto">
+      <button class="foto" style="background:${fundo(p.id)}" data-ver="${p.id}" aria-label="Ver ${p.nome}">
+        ${p.tag?`<span class="etiqueta ${p.de?'promo':''}">${p.tag}</span>`:''}
+        ${peca(p.forma,p.cores[0])}
+      </button>
+      <div class="info">
+        <div><h3>${p.nome}</h3><span class="tecido">${p.tecido}</span></div>
+        <div class="preco">${p.de?`<s>${brl(p.de)}</s>`:''}${brl(p.preco)}</div>
+      </div>
+      <div class="cores" aria-label="Cores: ${p.cores.map(c=>NOMES_COR[c]).join(', ')}">${p.cores.map(c=>`<span style="background:${CORES[c]}"></span>`).join('')}</div>
+    </article>`).join('') : '<p class="vazio">Nenhuma peça nessa categoria ainda.</p>';
+}
+$('#filtros').addEventListener('click',e=>{const b=e.target.closest('[data-cat]'); if(!b) return; filtro=b.dataset.cat; renderFiltros(); renderGrade();});
+$('#ordem').addEventListener('change',e=>{ordem=e.target.value; renderGrade();});
+$('#grade').addEventListener('click',e=>{const b=e.target.closest('[data-ver]'); if(b) abrirProduto(+b.dataset.ver, b);});
+
+/* ---------------- Modal ---------------- */
+let ultimoFoco=null;
+function abrirModal(html, origem){
+  ultimoFoco = origem || document.activeElement;
+  $('#caixa').innerHTML = `<button class="fechar" data-fechar aria-label="Fechar">×</button>` + html;
+  $('#modal').classList.add('aberto'); $('#modal').setAttribute('aria-hidden','false');
+  $('#fundo').classList.add('aberto');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>$('#caixa').querySelector('input,button:not(.fechar)')?.focus(),60);
+}
+function fecharTudo(){
+  $('#modal').classList.remove('aberto'); $('#modal').setAttribute('aria-hidden','true');
+  $('#sacola').classList.remove('aberto'); $('#sacola').setAttribute('aria-hidden','true');
+  $('#fundo').classList.remove('aberto');
+  document.body.style.overflow='';
+  ultimoFoco?.focus?.();
+}
+document.addEventListener('click',e=>{ if(e.target.closest('[data-fechar]')||e.target===$('#fundo')||e.target===$('#modal')) fecharTudo(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharTudo(); });
+
+function abrirProduto(id, origem){
+  const p = PRODUTOS.find(x=>x.id===id);
+  abrirModal(`
+    <div class="foto" id="fotoModal" style="background:${fundo(p.id)}">${peca(p.forma,p.cores[0])}</div>
+    <form class="detalhe" id="formProduto" novalidate>
+      <div><span class="tecido">${p.tecido} · ${p.cat}</span><h2>${p.nome}</h2></div>
+      <div class="preco">${p.de?`<s>${brl(p.de)}</s>`:''}${brl(p.preco)} <small style="font-weight:400;font-size:15px;color:#5c607a">ou ${brl(p.preco*.95)} no Pix</small></div>
+      <p>${p.desc}</p>
+      <fieldset><legend>Cor: <span id="nomeCor">${NOMES_COR[p.cores[0]]}</span></legend><div class="opcoes">
+        ${p.cores.map((c,i)=>`<input type="radio" name="cor" id="c${c}" value="${c}" ${i===0?'checked':''}><label for="c${c}" class="cor-op" style="background:${CORES[c]}"><span class="sr">${NOMES_COR[c]}</span></label>`).join('')}
+      </div></fieldset>
+      <fieldset><legend>Tamanho</legend><div class="opcoes">
+        ${p.tam.map(t=>`<input type="radio" name="tam" id="t${t}" value="${t}" ${p.tam.length===1?'checked':''}><label for="t${t}">${t}</label>`).join('')}
+      </div></fieldset>
+      <p class="erro" id="erroTam" role="alert"></p>
+      <button class="btn btn-cheio" type="submit">Adicionar à sacola</button>
+    </form>`, origem);
+  const f = $('#formProduto');
+  f.addEventListener('change',e=>{
+    if(e.target.name==='cor'){ $('#fotoModal').innerHTML=peca(p.forma,e.target.value); $('#nomeCor').textContent=NOMES_COR[e.target.value]; }
+    if(e.target.name==='tam') $('#erroTam').textContent='';
+  });
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    const tam = f.tam.value || f.querySelector('[name=tam]:checked')?.value;
+    if(!tam){ $('#erroTam').textContent='Escolha um tamanho para adicionar à sacola.'; return; }
+    adicionar(p.id, f.querySelector('[name=cor]:checked').value, tam);
+    fecharTudo();
+    aviso(`Na sacola: ${p.nome}`);
+  });
+}
+
+/* ---------------- Sacola ---------------- */
+function adicionar(id,cor,tam){
+  const ex = sacola.find(i=>i.id===id&&i.cor===cor&&i.tam===tam);
+  ex ? ex.qtd++ : sacola.push({id,cor,tam,qtd:1});
+  salvar(); renderSacola();
+  const b=$('#abrirSacola'); b.classList.remove('pulou'); void b.offsetWidth; b.classList.add('pulou');
+}
+const subtotal = () => sacola.reduce((s,i)=>s+PRODUTOS.find(p=>p.id===i.id).preco*i.qtd,0);
+function renderSacola(){
+  const n = sacola.reduce((s,i)=>s+i.qtd,0), sub = subtotal();
+  $('#qtdSacola').textContent = n;
+  const falta = FRETE_GRATIS - sub;
+  $('#frete').innerHTML = (sub===0?'Frete grátis a partir de '+brl(FRETE_GRATIS)+'.':
+    falta>0?`Faltam <b>${brl(falta)}</b> para o frete grátis.`:'<b>Você ganhou frete grátis.</b>')
+    + `<div class="trilho"><i style="width:${Math.min(100,sub/FRETE_GRATIS*100)}%"></i></div>`;
+  if(!sacola.length){
+    $('#itens').innerHTML = `<div class="sacola-vazia"><p>Sua sacola está vazia.</p><button class="btn btn-cheio" data-fechar>Continuar comprando</button></div>`;
+    $('#rodapeSacola').innerHTML=''; return;
+  }
+  $('#itens').innerHTML = sacola.map((i,k)=>{const p=PRODUTOS.find(x=>x.id===i.id); return `
+    <div class="item">
+      <div class="mini" style="background:${fundo(p.id)}">${peca(p.forma,i.cor)}</div>
+      <div><h3>${p.nome}</h3><small>${NOMES_COR[i.cor]} · ${i.tam}</small><br>
+        <span class="qtd-ctrl"><button data-menos="${k}" aria-label="Diminuir quantidade">−</button><span>${i.qtd}</span><button data-mais="${k}" aria-label="Aumentar quantidade">+</button></span>
+        <button class="remover" data-rem="${k}">Remover</button></div>
+      <b>${brl(p.preco*i.qtd)}</b>
+    </div>`}).join('');
+  const frete = falta>0?FRETE:0;
+  $('#rodapeSacola').innerHTML = `
+    <div class="linha"><span>Subtotal</span><span>${brl(sub)}</span></div>
+    <div class="linha"><span>Frete</span><span>${frete?brl(frete):'Grátis'}</span></div>
+    <div class="linha"><span>Desconto Pix (5%)</span><span>− ${brl(sub*.05)}</span></div>
+    <div class="linha total"><span>Total no Pix</span><span>${brl(sub*.95+frete)}</span></div>
+    <button class="btn btn-cheio" id="finalizar">Finalizar compra</button>`;
+}
+$('#itens').addEventListener('click',e=>{
+  const t=e.target, k=+(t.dataset.mais??t.dataset.menos??t.dataset.rem);
+  if(t.dataset.mais) sacola[k].qtd++;
+  else if(t.dataset.menos){ sacola[k].qtd--; if(!sacola[k].qtd) sacola.splice(k,1); }
+  else if(t.dataset.rem) sacola.splice(k,1);
+  else return;
+  salvar(); renderSacola();
+});
+$('#abrirSacola').addEventListener('click',()=>{
+  ultimoFoco=$('#abrirSacola');
+  $('#sacola').classList.add('aberto'); $('#sacola').setAttribute('aria-hidden','false'); $('#fundo').classList.add('aberto');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>$('#sacola .fechar').focus(),60);
+});
+$('#rodapeSacola').addEventListener('click',e=>{ if(e.target.id==='finalizar') abrirCheckout(); });
+
+/* ---------------- Checkout (demonstração) ---------------- */
+function qrFalso(){
+  let s='', seed=7;
+  const r=()=> (seed=(seed*9301+49297)%233280)/233280;
+  for(let y=0;y<21;y++)for(let x=0;x<21;x++){
+    const canto=(x<7&&y<7)||(x>13&&y<7)||(x<7&&y>13);
+    if(canto){ const cx=x>13?x-14:x, cy=y>13?y-14:y; if(cx===0||cx===6||cy===0||cy===6||(cx>1&&cx<5&&cy>1&&cy<5)) s+=`<rect x="${x}" y="${y}" width="1" height="1"/>`; }
+    else if(r()>.52) s+=`<rect x="${x}" y="${y}" width="1" height="1"/>`;
+  }
+  return `<svg viewBox="0 0 21 21" fill="#1A1D2E" aria-hidden="true">${s}</svg>`;
+}
+function abrirCheckout(){
+  $('#sacola').classList.remove('aberto'); $('#sacola').setAttribute('aria-hidden','true');
+  const sub=subtotal(), frete=sub>=FRETE_GRATIS?0:FRETE, total=sub*.95+frete;
+  abrirModal(`
+    <div class="foto" style="background:var(--anil);color:#fff;padding:40px;align-content:end;justify-items:start">
+      <div><h2 style="color:#fff">Quase lá</h2><p style="margin-top:12px;max-width:30ch;opacity:.9">${sacola.reduce((s,i)=>s+i.qtd,0)} peça(s) · total ${brl(total)} no Pix</p></div>
+    </div>
+    <form class="detalhe form-check" id="formCheck" novalidate>
+      <h2 style="font-size:30px">Entrega</h2>
+      <label>Nome completo<input name="nome" autocomplete="name" required></label>
+      <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+      <div class="dupla">
+        <label>CEP<input name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="60000-000" required maxlength="9"></label>
+        <label>Número<input name="num" required></label>
+      </div>
+      <p class="erro" id="erroCheck" role="alert"></p>
+      <button class="btn btn-cheio" type="submit">Gerar Pix de ${brl(total)}</button>
+    </form>`);
+  const f=$('#formCheck');
+  f.cep.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'').slice(0,8); e.target.value=v.length>5?v.slice(0,5)+'-'+v.slice(5):v;});
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!f.nome.value.trim()) return $('#erroCheck').textContent='Preencha seu nome.';
+    if(!/^\S+@\S+\.\S+$/.test(f.email.value)) return $('#erroCheck').textContent='Confira o e-mail: falta o @ ou o domínio.';
+    if(f.cep.value.replace(/\D/g,'').length!==8) return $('#erroCheck').textContent='O CEP precisa ter 8 números.';
+    if(!f.num.value.trim()) return $('#erroCheck').textContent='Informe o número do endereço.';
+    const pedido = 'VA'+Math.floor(10000+Math.random()*89999);
+    f.outerHTML = `<div class="detalhe">
+      <h2 style="font-size:30px">Pedido ${pedido} criado</h2>
+      <div class="pix">${qrFalso()}<div><b>${brl(total)}</b><br><span style="font-size:14px;color:#4b4f66">Escaneie no app do seu banco. Válido por 30 minutos.</span></div></div>
+      <p>Esta é uma loja de demonstração: o código acima não é um Pix real e nada será cobrado.</p>
+      <button class="btn btn-cheio" data-fechar>Voltar para a loja</button></div>`;
+    sacola=[]; salvar(); renderSacola();
+  });
+}
+
+/* ---------------- Newsletter ---------------- */
+$('#formNews').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=$('#emailNews').value, m=$('#msgNews');
+  m.textContent = /^\S+@\S+\.\S+$/.test(v) ? 'Cupom BEMVINDA10 ativado. Use na finalização.' : 'Digite um e-mail válido, como nome@exemplo.com.';
+});
+
+/* ---------------- Renda de bilro (desenho) ---------------- */
+(function(){
+  let g='';
+  for(let i=0;i<16;i++){
+    const a=i*22.5;
+    g+=`<g transform="rotate(${a} 100 100)"><ellipse cx="100" cy="52" rx="10" ry="30"/><circle cx="100" cy="14" r="5"/><path d="M100 82 Q118 100 100 118"/></g>`;
+  }
+  g+='<circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="88"/>';
+  document.getElementById('padraoRenda').innerHTML=g;
+})();
+
+/* ---------------- Início ---------------- */
+renderFiltros(); renderGrade(); renderSacola();
+
+/* Um único momento de animação: a chegada da jangada no hero */
+if(window.gsap && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const tl = gsap.timeline({defaults:{ease:'power3.out'}});
+  tl.from('#sol',{y:120,opacity:0,duration:1.1,transformOrigin:'center'})
+    .from('#jangada',{x:-260,opacity:0,duration:1.3},'-=.8')
+    .from('#velaG,#velaP',{scaleY:.2,transformOrigin:'bottom',duration:.9,stagger:.12},'-=.9')
+    .from('.h-l',{yPercent:100,opacity:0,duration:.8,stagger:.09},'-=1.2')
+    .from('.h-t',{y:18,opacity:0,duration:.6,stagger:.08},'-=.4');
+  gsap.to('#jangada',{y:-6,rotation:-.6,transformOrigin:'center bottom',duration:2.4,ease:'sine.inOut',yoyo:true,repeat:-1,delay:1.6});
+}
+</script>
+</body>
+</html>
